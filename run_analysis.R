@@ -3,6 +3,7 @@
 # This R script does:
 # 1. Merges the training and the test sets to create one data set.
 
+
 tmp1 <- read.table("train/X_train.txt")
 tmp2 <- read.table("test/X_test.txt")
 X <- rbind(tmp1, tmp2)
@@ -55,5 +56,5 @@ for (s in 1:numSubjects) {
                 row = row+1
         }
 }
-# write.table(result, "data_set_with_the_averages.txt")
-write.table(result, "data_set_with_the_averages_rownames_FALSE.txt", row.names = FALSE)
+result <- result[order(result$subject, result$activity),]
+write.table(result, "data_set_with_the_averages.txt", row.names = FALSE, sep="\t")
