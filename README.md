@@ -22,7 +22,5 @@ Finally, the script creates a 2nd, independent tidy data set with the average of
 * In RStudio: setwd("C:\\Users\\yourname\\Documents\\R\\UCI HAR Dataset\\"), followed by: source("run_analysis.R")
 (If you already put the files in your current working directory, you only need to do the second part: source("run_analysis.R"))
 
-You can comment/uncomment the lines 59 and 58 of the code to get the file "data_set_with_the_averages.txt" without the row names. The new file will be named as "data_set_with_the_averages_rownames_FALSE.txt".
-
 Use data <- read.table("data_set_with_the_averages.txt") to read the data. It is 180x68 because there are 30 subjects and 6 activities, thus "for each activity and each subject" means 30 * 6 = 180 rows. Note that the provided R script has no assumptions on numbers of records, only on locations of files.
 
